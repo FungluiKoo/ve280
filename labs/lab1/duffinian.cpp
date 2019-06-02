@@ -21,6 +21,7 @@ bool is_duffinian(int num) {
     for(int i=1; i<=num; i++){ 
         if(n%i==0){divisorSum+=i;}
     }
+    if(divisorSum<=num+1){return false;}
     if(1==GCD(divisorSum,num)){return true;}
     else{return false;}
 }
